@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ICCICT 2K27 | International Conference on Computational Intelligence and Communication Technologies</title>
+<meta name="description" content="ICCICT 2K27 – International Conference on Computational Intelligence and Communication Technologies, hosted at Dr. N.G.P. Arts and Science College, Coimbatore, Tamil Nadu, India. Hybrid mode (online and offline).">
+<meta name="theme-color" content="#0a1a3a">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logos/ngp-college-seal-white-bg.png">
+<meta property="og:title" content="ICCICT 2K27 – International Conference on Computational Intelligence and Communication Technologies">
+<meta property="og:description" content="Call for papers, tracks, important dates, registration and venue information for ICCICT 2K27.">
+<link rel="icon" type="image/png" href="assets/logos/ngp-college-seal.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================================
+   ICCICT 2K27 — Design tokens
+   ========================================================= */
+:root{
+  --navy:#0a1a3a;
+  --navy-2:#102552;
+  --royal:#1f4bbf;
+  --royal-d:#173a96;
+  --gold:#b8913a;
+  --gold-l:#d9b765;
+  --ink:#1b2438;
+  --muted:#586279;
+  --line:#dde2ec;
+  --grey:#f3f5f9;
+  --white:#fff;
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  --nav-h:72px;
+  --wrap:1160px;
+  --radius:6px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--nav-h)}
+body{font-family:var(--sans);color:var(--ink);background:var(--white);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.icon{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;background:var(--gold);color:var(--navy);padding:10px 16px;font-weight:600;z-index:200;border-radius:var(--radius)}
+.skip:focus{top:12px}
+
+.wrap{width:min(var(--wrap),100% - 40px);margin-inline:auto}
+section{padding:104px 0;position:relative}
+.bg-grey{background:var(--grey)}
+.bg-navy{background:var(--navy);color:#e6ebf7}
+
+/* Section headings */
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:.74rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.eyebrow::before{content:"";width:32px;height:1px;background:currentColor}
+h1,h2,h3,h4,.brand b,.cd-grid b,.track-no,.spk-img{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--navy);line-height:1.12;font-weight:600}
+.bg-navy h2,.bg-navy h3{color:#fff}
+.sec-head{max-width:720px;margin-bottom:56px}
+.sec-head.center{margin-inline:auto;text-align:center}
+.sec-head.center .eyebrow{justify-content:center}
+.sec-head h2{font-size:clamp(2.1rem,4vw,3.1rem);margin-top:14px}
+.sec-head p{color:var(--muted);margin-top:16px;font-size:1.05rem}
+.bg-navy .sec-head p{color:#b4c0dc}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 28px;font-weight:600;font-size:.92rem;letter-spacing:.02em;border-radius:var(--radius);border:1.5px solid transparent;transition:background .25s,color .25s,border-color .25s,transform .25s}
+.btn .icon{width:16px;height:16px;transition:transform .25s}
+.btn:hover .icon{transform:translateX(3px)}
+.btn-gold{background:var(--gold);color:#fff;border-color:var(--gold)}
+.btn-gold:hover{background:var(--gold-l);border-color:var(--gold-l);color:var(--navy)}
+.btn-royal{background:var(--royal);color:#fff;border-color:var(--royal)}
+.btn-royal:hover{background:var(--royal-d);border-color:var(--royal-d)}
+.btn-ghost{color:#fff;border-color:rgba(255,255,255,.45)}
+.btn-ghost:hover{background:#fff;color:var(--navy);border-color:#fff}
+.btn-outline{color:var(--navy);border-color:var(--navy)}
+.btn-outline:hover{background:var(--navy);color:#fff}
+.btn-sm{padding:10px 20px;font-size:.84rem}
+
+/* =========================================================
+   Navigation
+   ========================================================= */
+.nav{position:sticky;top:0;z-index:100;height:var(--nav-h);background:rgba(255,255,255,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 2px 18px rgba(10,26,58,.08)}
+.nav .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;width:min(1320px,100% - 40px)}
+.brand{display:flex;align-items:center;gap:12px;flex:none}
+.brand img{height:44px;width:auto;flex:none}
+.brand img.plate{background:#fff;border-radius:50%;padding:3px;height:52px}
+.brand b{display:block;font-family:var(--serif);font-size:1.45rem;line-height:1;color:var(--navy);letter-spacing:.02em}
+.brand small{display:block;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.menu{display:flex;align-items:center;gap:2px}
+.menu a{position:relative;padding:8px 10px;font-size:.8rem;font-weight:500;color:var(--ink);white-space:nowrap;transition:color .2s}
+.menu a::after{content:"";position:absolute;left:10px;right:10px;bottom:2px;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.menu a:hover,.menu a.active{color:var(--royal)}
+.menu a:hover::after,.menu a.active::after{transform:scaleX(1)}
+.nav-cta{margin-left:10px}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line);background:#fff;border-radius:var(--radius);color:var(--navy);align-items:center;justify-content:center}
+.burger .icon{width:22px;height:22px}
+.burger .i-close{display:none}
+.burger[aria-expanded="true"] .i-open{display:none}
+.burger[aria-expanded="true"] .i-close{display:block}
+
+@media(max-width:1240px){
+  .burger{display:flex}
+  .menu{position:absolute;top:var(--nav-h);left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#fff;border-bottom:1px solid var(--line);padding:8px 20px 20px;box-shadow:0 18px 30px rgba(10,26,58,.12);max-height:calc(100vh - var(--nav-h));overflow-y:auto;opacity:0;visibility:hidden;transform:translateY(-8px);transition:.25s}
+  .menu.open{opacity:1;visibility:visible;transform:none}
+  .menu a{padding:14px 4px;font-size:.95rem;border-bottom:1px solid var(--line)}
+  .menu a::after{display:none}
+  .menu a.active{color:var(--royal);font-weight:600}
+  .nav-cta{margin:16px 0 0}
+  .nav-cta .btn{width:100%}
+}
+
+/* =========================================================
+   Hero
+   ========================================================= */
+.hero{padding:0;min-height:calc(100vh - var(--nav-h));display:flex;flex-direction:column;background:var(--navy);color:#fff;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;
+  background:
+   radial-gradient(900px 520px at 85% 10%,rgba(31,75,191,.55),transparent 65%),
+   radial-gradient(600px 400px at 0% 100%,rgba(184,145,58,.16),transparent 65%),
+   var(--navy)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+  background-size:64px 64px;
+  -webkit-mask-image:radial-gradient(ellipse at 70% 40%,#000 10%,transparent 75%);mask-image:radial-gradient(ellipse at 70% 40%,#000 10%,transparent 75%)}
+#net{position:absolute;inset:0;width:100%;height:100%;z-index:-1;opacity:.75}
+.hero-main{flex:1;display:flex;align-items:center;padding:72px 0 56px}
+.hero-label{display:inline-flex;align-items:center;gap:12px;font-size:.78rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-l);padding:8px 16px;border:1px solid rgba(217,183,101,.4);border-radius:2px}
+.hero h1{color:#fff;font-size:clamp(3.8rem,10vw,7.6rem);font-weight:700;letter-spacing:.01em;margin:26px 0 14px;line-height:.98}
+.hero h1 span{color:var(--gold-l)}
+.hero-title{font-family:var(--sans);font-size:clamp(1.05rem,2vw,1.4rem);font-weight:400;max-width:760px;color:#d3dbef;line-height:1.55}
+.hero-title b{color:#fff;font-weight:600}
+.hero-meta{display:flex;flex-wrap:wrap;gap:12px 36px;margin:34px 0 38px;font-size:.95rem;color:#e6ebf7}
+.hero-meta div{display:flex;align-items:center;gap:10px}
+.hero-meta .icon{width:20px;height:20px;color:var(--gold-l)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+
+.countdown{border-top:1px solid rgba(255,255,255,.14);background:rgba(6,16,38,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.countdown .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px 40px;padding:22px 0}
+.cd-label{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#aab7d6;font-weight:600}
+.cd-label em{display:block;font-style:normal;letter-spacing:.04em;text-transform:none;font-weight:400;font-size:.78rem;margin-top:4px;color:#8394ba}
+.cd-grid{display:flex;gap:clamp(18px,4vw,48px)}
+.cd-grid div{text-align:center;min-width:64px}
+.cd-grid b{display:block;font-family:var(--serif);font-size:clamp(2.2rem,5vw,3.2rem);line-height:1;color:#fff;font-weight:600;font-variant-numeric:tabular-nums}
+.cd-grid small{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-l)}
+
+/* =========================================================
+   About
+   ========================================================= */
+.about-top{display:grid;grid-template-columns:5fr 7fr;gap:72px;align-items:start}
+.about-top h2{font-size:clamp(2.2rem,4.2vw,3.3rem);margin-top:14px}
+.about-top .rule{width:64px;height:3px;background:var(--gold);margin-top:26px}
+.about-text p{color:var(--muted);font-size:1.05rem;margin-bottom:18px}
+.about-text p:first-child{font-size:1.2rem;color:var(--ink);line-height:1.65}
+.about-text p:first-child::first-letter{font-family:var(--serif);float:left;font-size:4.2rem;line-height:.8;padding:8px 12px 0 0;color:var(--royal);font-weight:700}
+.about-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:80px;border-top:1px solid var(--line)}
+.about-col{padding:40px 36px 0 0}
+.about-col + .about-col{padding-left:36px;border-left:1px solid var(--line)}
+.about-col h3{font-size:1.65rem;margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.about-col h3 .icon{width:24px;height:24px;color:var(--gold)}
+.about-col p{color:var(--muted);font-size:.97rem}
+.tick li{position:relative;padding:0 0 14px 28px;color:var(--muted);font-size:.97rem}
+.tick li::before{content:"";position:absolute;left:0;top:.5em;width:14px;height:8px;border-left:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(-45deg) scale(.9)}
+.placeholder-note{display:inline-block;margin-top:14px;font-size:.78rem;color:var(--gold);font-weight:600;letter-spacing:.04em}
+
+/* =========================================================
+   Call for papers
+   ========================================================= */
+.cfp{display:grid;grid-template-columns:7fr 5fr;gap:56px;align-items:stretch}
+.cfp-copy h2{font-size:clamp(2.1rem,4vw,3.1rem);margin:14px 0 22px}
+.cfp-copy p{color:#b4c0dc;font-size:1.05rem;margin-bottom:18px}
+.cfp-list{margin:26px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:12px 28px}
+.cfp-list li{display:flex;gap:12px;font-size:.95rem;color:#dfe6f6}
+.cfp-list .icon{width:18px;height:18px;color:var(--gold-l);margin-top:4px}
+.cfp-card{background:#fff;color:var(--ink);padding:40px 36px;border-radius:var(--radius);border-top:4px solid var(--gold);display:flex;flex-direction:column;justify-content:center}
+.cfp-card h3{color:var(--navy);font-size:1.7rem;margin-bottom:10px}
+.cfp-card p{color:var(--muted);font-size:.95rem;margin-bottom:22px}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.cfp-card .btn{width:100%}
+.cfp-card small{display:block;margin-top:14px;color:var(--muted);font-size:.8rem;text-align:center}
+
+/* =========================================================
+   Tracks
+   ========================================================= */
+.tracks{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.track{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px 28px;position:relative;transition:border-color .3s,transform .3s,box-shadow .3s;display:flex;flex-direction:column}
+.track::before{content:"";position:absolute;left:-1px;right:-1px;top:-1px;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.track:hover{transform:translateY(-4px);border-color:#c6cfe2;box-shadow:0 14px 30px rgba(10,26,58,.08)}
+.track:hover::before{transform:scaleX(1)}
+.track-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+.track-ic{width:48px;height:48px;border-radius:50%;background:var(--navy);color:var(--gold-l);display:grid;place-items:center}
+.track-ic .icon{width:22px;height:22px}
+.track-no{font-family:var(--serif);font-size:1.9rem;color:#c9d1e3;font-weight:600}
+.track h3{font-size:1.32rem;margin-bottom:8px}
+.track p{color:var(--muted);font-size:.9rem;margin-bottom:16px}
+.track ul{margin-top:auto;border-top:1px solid var(--line);padding-top:14px}
+.track li{font-size:.84rem;color:var(--ink);padding:3px 0 3px 16px;position:relative}
+.track li::before{content:"";position:absolute;left:0;top:.85em;width:6px;height:1px;background:var(--gold)}
+
+/* =========================================================
+   Dates timeline
+   ========================================================= */
+.timeline{max-width:860px;margin:0 auto;position:relative}
+.timeline::before{content:"";position:absolute;left:calc(50% - .5px);top:8px;bottom:8px;width:1px;background:var(--line)}
+.tl{display:grid;grid-template-columns:1fr 1fr;gap:0;position:relative;margin-bottom:34px}
+.tl:last-child{margin-bottom:0}
+.tl::before{content:"";position:absolute;left:50%;top:22px;width:13px;height:13px;margin-left:-6.5px;background:#fff;border:2px solid var(--gold);border-radius:50%;z-index:1}
+.tl.final::before{background:var(--gold)}
+.tl-box{padding:20px 28px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);width:calc(100% - 36px);transition:border-color .3s}
+.tl:hover .tl-box{border-color:var(--gold)}
+.tl:nth-child(odd) .tl-box{grid-column:1;justify-self:start;text-align:right}
+.tl:nth-child(even) .tl-box{grid-column:2;justify-self:end}
+.tl-step{font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--royal)}
+.tl h3{font-family:var(--sans);font-size:1.02rem;font-weight:600;margin:4px 0 4px;color:var(--navy)}
+.tl .date{color:var(--gold);font-weight:600;font-size:.93rem}
+.tl.final .tl-box{background:var(--navy);border-color:var(--navy)}
+.tl.final h3{color:#fff}
+.tl.final .tl-step{color:var(--gold-l)}
+.tl.final .date{color:var(--gold-l)}
+.dates-note{text-align:center;margin-top:40px;color:var(--muted);font-size:.9rem}
+
+/* =========================================================
+   Speakers & committees
+   ========================================================= */
+.speakers{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.spk{background:#fff;border:1px solid var(--line);border-radius:var(--radius);text-align:center;padding:36px 22px 30px;transition:transform .3s,box-shadow .3s}
+.spk:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(10,26,58,.08)}
+.spk-img{width:116px;height:116px;border-radius:50%;margin:0 auto 22px;display:grid;place-items:center;background:var(--navy);color:var(--gold-l);font-family:var(--serif);font-size:2.4rem;font-weight:600;letter-spacing:.04em;border:3px solid #fff;box-shadow:0 0 0 1px var(--gold)}
+.spk-role{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.spk h3{font-size:1.45rem;margin:8px 0 8px}
+.spk p{color:var(--muted);font-size:.88rem;line-height:1.55}
+
+.committees{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.cmt{background:#fff;border:1px solid var(--line);border-left:4px solid var(--navy);border-radius:var(--radius);padding:34px 34px 30px}
+.cmt:nth-child(2){border-left-color:var(--gold)}
+.cmt h3{font-size:1.65rem;margin-bottom:6px}
+.cmt > p{color:var(--muted);font-size:.92rem;margin-bottom:22px}
+.cmt li{display:flex;align-items:center;gap:14px;padding:12px 0;border-top:1px solid var(--line);font-size:.92rem}
+.cmt .ini{width:38px;height:38px;border-radius:50%;background:var(--grey);color:var(--royal);font-weight:600;font-size:.8rem;display:grid;place-items:center;flex:none;border:1px solid var(--line)}
+.cmt li > span:last-child{color:var(--muted);margin-left:auto;font-size:.8rem;white-space:nowrap}
+.sub-head{margin:80px 0 40px}
+
+/* =========================================================
+   Registration
+   ========================================================= */
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:#fff;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;min-width:620px}
+caption{text-align:left;padding:18px 28px;font-weight:600;color:var(--navy);border-bottom:1px solid var(--line);font-size:.95rem}
+th,td{padding:20px 28px;text-align:left}
+thead th{background:var(--navy);color:#fff;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+thead th small{display:block;color:var(--gold-l);letter-spacing:.06em;text-transform:none;font-weight:400;font-size:.76rem;margin-top:2px}
+tbody th{font-weight:600;color:var(--navy);font-size:.97rem}
+tbody td{color:var(--navy);font-weight:600;font-variant-numeric:tabular-nums}
+tbody tr + tr > *{border-top:1px solid var(--line)}
+tbody tr:hover > *{background:#f8f9fc}
+.tba{color:var(--muted);font-weight:500}
+.reg-foot{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;margin-top:32px}
+.reg-foot p{color:var(--muted);font-size:.92rem;max-width:620px}
+
+/* =========================================================
+   Venue
+   ========================================================= */
+.venue{display:grid;grid-template-columns:5fr 7fr;gap:48px;align-items:stretch}
+.venue-info h2{font-size:clamp(2.1rem,4vw,3.1rem);margin:14px 0 22px}
+.venue-info > p{color:var(--muted);margin-bottom:24px}
+.facts{border-top:1px solid var(--line)}
+.facts li{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.facts .icon{width:22px;height:22px;color:var(--gold);margin-top:3px}
+.facts b{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.facts span{color:var(--navy);font-weight:500}
+.map{position:relative;min-height:380px;border-radius:var(--radius);overflow:hidden;background:var(--navy);display:grid;place-items:center;text-align:center;color:#fff;padding:32px;isolation:isolate}
+.map::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.55;
+  background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:40px 40px}
+.map::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 50% 45%,rgba(31,75,191,.5),transparent 65%)}
+.map .pin{width:56px;height:56px;margin:0 auto 18px;border:1px solid var(--gold-l);border-radius:50%;display:grid;place-items:center;color:var(--gold-l)}
+.map .pin .icon{width:26px;height:26px}
+.map h3{color:#fff;font-size:1.6rem;margin-bottom:8px}
+.map p{color:#b4c0dc;font-size:.92rem;max-width:380px;margin:0 auto 22px}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* =========================================================
+   Contact
+   ========================================================= */
+.contact{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:start}
+.c-list{display:grid;gap:0;border-top:1px solid var(--line)}
+.c-item{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
+.c-item .ci{width:46px;height:46px;border-radius:50%;background:var(--navy);color:var(--gold-l);display:grid;place-items:center;flex:none}
+.c-item .ci .icon{width:20px;height:20px}
+.c-item b{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.c-item a,.c-item span.v{color:var(--navy);font-weight:500;word-break:break-word}
+.c-item a:hover{color:var(--royal)}
+.verify{display:inline-block;margin-left:8px;padding:2px 8px;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:#8a6a1c;background:#fbf3de;border:1px solid #ecd9a4;border-radius:2px;vertical-align:middle}
+.c-note{margin-top:20px;font-size:.84rem;color:var(--muted)}
+form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:38px;display:grid;gap:20px;border-top:4px solid var(--navy)}
+form h3{font-size:1.65rem;margin-bottom:-6px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.field label{display:block;font-size:.8rem;font-weight:600;color:var(--navy);margin-bottom:6px}
+.field label i{color:#b3261e;font-style:normal}
+.field input,.field textarea{width:100%;padding:13px 15px;border:1px solid #c5ccdb;border-radius:var(--radius);font:inherit;font-size:.95rem;color:var(--ink);background:#fff;transition:border-color .2s,box-shadow .2s}
+.field textarea{min-height:140px;resize:vertical}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--royal);box-shadow:0 0 0 3px rgba(31,75,191,.15)}
+.field.invalid input,.field.invalid textarea{border-color:#b3261e}
+.err{display:none;margin-top:6px;font-size:.8rem;color:#b3261e}
+.field.invalid .err{display:block}
+.form-status{display:none;padding:14px 16px;border-radius:var(--radius);font-size:.9rem;line-height:1.55}
+.form-status.show{display:block}
+.form-status.ok{background:#edf6ee;border:1px solid #b9dbbd;color:#1f5a2a}
+.form-status.bad{background:#fdeeed;border:1px solid #f2c0bc;color:#8c1d16}
+.form-fine{font-size:.78rem;color:var(--muted)}
+
+/* =========================================================
+   Footer
+   ========================================================= */
+footer{background:var(--navy);color:#b4c0dc;padding:80px 0 0;border-top:3px solid var(--gold)}
+.foot{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.3fr;gap:48px;padding-bottom:56px}
+.foot .brand b{color:#fff}
+.foot .brand small{color:#8e9cc0}
+.foot p{font-size:.9rem;margin-top:18px;max-width:340px}
+.foot h4{font-family:var(--sans);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-l);margin-bottom:20px;font-weight:600}
+.foot li{margin-bottom:10px;font-size:.9rem}
+.foot a{transition:color .2s}
+.foot a:hover{color:#fff}
+.foot .soon{opacity:.75}
+.foot .soon em{font-style:normal;font-size:.7rem;color:var(--gold-l);margin-left:6px;letter-spacing:.06em}
+.foot address{font-style:normal;font-size:.9rem;display:grid;gap:10px}
+.copy{border-top:1px solid rgba(255,255,255,.12);padding:22px 0;font-size:.82rem;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;color:#8e9cc0}
+
+/* Toast */
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,30px);background:var(--navy);color:#fff;padding:14px 22px;border-radius:var(--radius);border-left:4px solid var(--gold);font-size:.9rem;box-shadow:0 12px 30px rgba(10,26,58,.3);opacity:0;pointer-events:none;transition:.35s;z-index:150;max-width:calc(100% - 32px)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* Back to top */
+.totop{position:fixed;right:20px;bottom:20px;width:46px;height:46px;border-radius:50%;background:var(--navy);color:var(--gold-l);border:1px solid var(--gold);display:grid;place-items:center;opacity:0;visibility:hidden;transition:.3s;z-index:90}
+.totop.show{opacity:1;visibility:visible}
+.totop:hover{background:var(--gold);color:#fff}
+.totop .icon{transform:rotate(-90deg);width:20px;height:20px}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+.no-js .reveal{opacity:1;transform:none}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media(max-width:1100px){
+  .tracks,.speakers{grid-template-columns:repeat(2,1fr)}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  section{padding:76px 0}
+  .about-top,.cfp,.venue,.contact,.committees{grid-template-columns:1fr;gap:40px}
+  .about-cols{grid-template-columns:1fr;margin-top:56px}
+  .about-col,.about-col + .about-col{padding:32px 0;border-left:0;border-bottom:1px solid var(--line)}
+  .about-col:last-child{border-bottom:0}
+  .hero-main{padding:56px 0 44px}
+  .map{min-height:320px}
+  .timeline::before{left:15px}
+  .tl{grid-template-columns:1fr}
+  .tl::before{left:15px;top:24px}
+  .tl:nth-child(odd) .tl-box,.tl:nth-child(even) .tl-box{grid-column:1;justify-self:end;text-align:left;width:calc(100% - 44px)}
+  .sub-head{margin-top:60px}
+}
+@media(max-width:640px){
+  :root{--nav-h:64px}
+  body{font-size:15.5px}
+  .tracks,.speakers,.cfp-list,.row,.foot{grid-template-columns:1fr}
+  .hero-cta .btn{flex:1 1 100%}
+  .hero-meta{flex-direction:column;gap:12px}
+  .countdown .wrap{justify-content:center;text-align:center}
+  .cd-grid{gap:16px}
+  .cd-grid div{min-width:56px}
+  form{padding:26px 20px}
+  .cfp-card{padding:30px 24px}
+  .cmt{padding:26px 22px}
+  .brand small{display:none}
+  .reg-foot .btn{width:100%}
+  th,td{padding:16px 18px}
+  .copy{flex-direction:column}
+}
+
+/* ===== Institutional branding, committees, gallery (v2) ===== */
+.host{display:inline-flex;align-items:center;gap:16px;background:#fff;color:var(--navy);padding:10px 24px 10px 12px;border-radius:var(--radius);margin-bottom:28px;transition:transform .25s}
+.host:hover{transform:translateY(-2px)}
+.host img{height:60px;width:auto}
+.host small{display:block;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;line-height:1.2}
+.host b{display:block;font-family:var(--serif);font-size:1.25rem;line-height:1.15;font-weight:700;color:var(--navy)}
+.host em{display:block;font-style:normal;font-size:.76rem;color:var(--muted)}
+.hero-label{display:flex;width:fit-content}
+
+.campus{position:relative;border-radius:var(--radius);overflow:hidden;margin-bottom:56px;background:var(--navy)}
+.campus img{width:100%;height:auto;aspect-ratio:1920/536;object-fit:cover}
+.campus figcaption{position:absolute;left:0;right:0;bottom:0;padding:48px 32px 22px;color:#fff;background:linear-gradient(transparent,rgba(10,26,58,.88));font-family:var(--serif);font-size:1.5rem;font-weight:600}
+.campus figcaption small{display:block;font-family:var(--sans);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-l);font-weight:600;margin-bottom:2px}
+.inst{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.inst-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:36px;border-top:4px solid var(--navy)}
+.inst-card:nth-child(2){border-top-color:var(--gold)}
+.inst-card h3{font-size:1.65rem;margin-bottom:14px}
+.inst-card p{color:var(--muted);font-size:.97rem;margin-bottom:12px}
+.inst-id{display:flex;gap:20px;align-items:center;margin-bottom:18px}
+.inst-id img{height:84px;width:auto;flex:none}
+.inst-id b{font-family:var(--serif);font-size:1.35rem;color:var(--navy);line-height:1.2;display:block}
+.inst-id span{font-size:.88rem;color:var(--muted)}
+.depts{columns:2;column-gap:24px;margin:8px 0 14px}
+.depts li{break-inside:avoid;padding:5px 0 5px 16px;position:relative;font-size:.9rem;color:var(--ink)}
+.depts li::before{content:"";position:absolute;left:0;top:.9em;width:6px;height:1px;background:var(--gold)}
+.partners{margin-top:48px;padding-top:36px;border-top:1px solid var(--line);text-align:center}
+.partners h3{font-size:1.4rem;margin-bottom:6px}
+.partners p{font-size:.84rem;color:var(--muted);margin-bottom:24px}
+.partners div{display:flex;flex-wrap:wrap;gap:28px 56px;align-items:center;justify-content:center}
+.partners img{height:54px;width:auto;max-width:200px;object-fit:contain}
+
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.gallery button{border:0;padding:0;background:var(--navy);border-radius:var(--radius);overflow:hidden;position:relative;display:block}
+.gallery button:nth-child(1){grid-column:span 7}
+.gallery button:nth-child(2){grid-column:span 5}
+.gallery button:nth-child(3){grid-column:span 5}
+.gallery button:nth-child(4){grid-column:span 7}
+.gallery img{width:100%;height:100%;aspect-ratio:16/9;object-fit:cover;transition:transform .6s,opacity .3s}
+.gallery button:hover img{transform:scale(1.04);opacity:.9}
+.quote{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;max-width:820px;margin:0 auto 48px;text-align:center;font-family:var(--serif);font-size:clamp(1.35rem,2.4vw,1.8rem);line-height:1.45;color:var(--navy)}
+.quote cite{display:block;margin-top:14px;font-family:var(--sans);font-style:normal;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+dialog.lb{border:0;background:transparent;max-width:min(1100px,94vw);width:100%;padding:0;margin:auto;overflow:visible}
+dialog.lb::backdrop{background:rgba(6,16,38,.88)}
+dialog.lb img{width:100%;height:auto;max-height:84vh;object-fit:contain;border-radius:var(--radius)}
+dialog.lb button{position:absolute;top:-46px;right:0;background:none;border:0;color:#fff;font-size:.9rem;display:flex;align-items:center;gap:8px;padding:8px}
+dialog.lb button .icon{width:20px;height:20px}
+
+.notice{display:flex;gap:14px;align-items:flex-start;max-width:920px;margin:-24px auto 40px;padding:16px 20px;background:#fbf3de;border:1px solid #ecd9a4;border-radius:var(--radius);font-size:.88rem;color:#6b5314;line-height:1.55}
+.notice .icon{width:20px;height:20px;margin-top:2px}
+.tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:0;margin-bottom:48px;border-bottom:1px solid var(--line)}
+.tabs button{background:none;border:0;padding:14px 26px;font-weight:600;font-size:.9rem;color:var(--muted);position:relative;transition:color .2s}
+.tabs button::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--gold);transform:scaleX(0);transition:transform .3s}
+.tabs button:hover{color:var(--royal)}
+.tabs button[aria-selected="true"]{color:var(--navy)}
+.tabs button[aria-selected="true"]::after{transform:scaleX(1)}
+.panel[hidden]{display:none}
+.grp{margin-bottom:56px}
+.grp:last-child{margin-bottom:0}
+.grp h3{font-size:1.7rem;display:flex;align-items:center;gap:16px;margin-bottom:26px}
+.grp h3::after{content:"";flex:1;height:1px;background:var(--line)}
+.grp h3 .count{font-family:var(--sans);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;order:2}
+.grp h3 .count + ::after{order:3}
+.people{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px}
+.people.cols-3{grid-template-columns:repeat(3,1fr)}
+.people.one{grid-template-columns:minmax(260px,420px);justify-content:center}
+.people.duo{grid-template-columns:repeat(2,minmax(260px,420px));justify-content:center}
+.people.p5{grid-template-columns:repeat(6,1fr)}
+.people.p5 .pc{grid-column:span 2}
+.people.p5 .pc:nth-child(-n+2){grid-column:span 3}
+.pc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 22px 24px;text-align:center;transition:transform .3s,box-shadow .3s,border-color .3s;position:relative}
+.pc:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(10,26,58,.08);border-color:#c6cfe2}
+.pc .av{width:84px;height:84px;border-radius:50%;margin:0 auto 16px;background:var(--navy);color:var(--gold-l);display:grid;place-items:center;font-family:var(--serif);font-size:1.8rem;font-weight:600;letter-spacing:.04em;box-shadow:0 0 0 3px #fff,0 0 0 4px var(--gold);overflow:hidden;font-variant-numeric:lining-nums}
+.pc .av img{width:100%;height:100%;object-fit:cover}
+.pc h4{font-size:1.25rem;line-height:1.25;margin-bottom:6px}
+.pc p{color:var(--muted);font-size:.86rem;line-height:1.5}
+.pc.lg{padding:36px 28px 30px;border-top:3px solid var(--gold)}
+.pc.lg .av{width:112px;height:112px;font-size:2.4rem}
+.pc.lg h4{font-size:1.5rem}
+.pc .tag{display:inline-block;margin-top:12px;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:#8a6a1c;background:#fbf3de;border:1px solid #ecd9a4;border-radius:2px;padding:2px 8px}
+.roster{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:0 28px;border-top:1px solid var(--line)}
+.roster li{display:flex;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.roster .ini{width:36px;height:36px;border-radius:50%;background:var(--grey);border:1px solid var(--line);color:var(--royal);font-size:.74rem;font-weight:600;display:grid;place-items:center;flex:none}
+.roster b{display:block;font-size:.92rem;color:var(--navy);font-weight:600;line-height:1.35}
+.roster span{display:block;font-size:.8rem;color:var(--muted);line-height:1.4}
+@media(max-width:900px){.people.p5{grid-template-columns:repeat(2,1fr)}.people.p5 .pc,.people.p5 .pc:nth-child(-n+2){grid-column:auto}.people.p5 .pc:last-child{grid-column:1/-1}.inst{grid-template-columns:1fr}.people.cols-3{grid-template-columns:repeat(2,1fr)}.campus figcaption{font-size:1.2rem;padding:36px 20px 16px}}
+@media(max-width:640px){.depts{columns:1}.people,.people.cols-3,.people.duo{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.gallery button:nth-child(n){grid-column:span 2}.tabs button{padding:12px 14px;font-size:.84rem}.people.p5{grid-template-columns:1fr}.inst-card{padding:26px 20px}.host{padding-right:16px}.host b{font-size:1.05rem}.host img{height:50px}.roster{grid-template-columns:1fr}}
+
+
+/* ===== Hero v3 ===== */
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:56px;align-items:center}
+.hero h1{font-size:clamp(3.6rem,8.4vw,7rem);margin:4px 0 14px;background:linear-gradient(100deg,#fff 0%,#fff 48%,#f0d58e 72%,#c9a24a 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.hero h1 span{color:inherit;-webkit-text-fill-color:transparent}
+.hero-visual{position:relative;max-width:440px;width:100%;margin-left:auto;padding:0 22px 26px 0}
+.arch{position:relative;aspect-ratio:4/5.2;border-radius:999px 999px 10px 10px;overflow:hidden;border:1px solid rgba(217,183,101,.7);box-shadow:0 30px 60px rgba(0,0,0,.4)}
+.arch::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,26,58,.15),transparent 40%,rgba(10,26,58,.55))}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:58% 50%;transform:scale(1.04);animation:kb 18s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.14) translateX(-2%)}}
+.hero-visual::before{content:"";position:absolute;inset:18px 0 0 22px;border:1px solid rgba(217,183,101,.4);border-radius:999px 999px 10px 10px;z-index:-1}
+.chip{position:absolute;display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,.96);color:var(--navy);border-radius:var(--radius);box-shadow:0 14px 30px rgba(0,0,0,.28);font-size:.74rem;line-height:1.35}
+.chip b{display:block;font-size:.86rem;font-weight:700}
+.chip .icon{width:24px;height:24px;color:var(--gold)}
+.chip-a{left:-34px;top:46%}
+.chip-b{right:-4px;bottom:0}
+#cdNote:empty{display:none}
+.spk-panel{max-width:760px;margin:0 auto;background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:var(--radius);padding:36px;text-align:center}
+.spk-panel ul{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 36px;margin-bottom:18px}
+.spk-panel li{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:1.4rem;color:var(--navy);font-weight:600}
+.spk-panel .icon{width:18px;height:18px;color:var(--gold)}
+.spk-panel p{color:var(--muted)}
+.fee-soon{color:var(--muted);font-weight:500;font-style:italic}
+/* Hero polish */
+.hero-main{padding:44px 0 36px}
+.host{margin-bottom:22px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.hero-date{display:inline-flex;align-items:center;gap:14px;margin:0 0 20px;padding:10px 20px 10px 14px;border:1px solid rgba(217,183,101,.55);border-radius:999px;background:linear-gradient(90deg,rgba(217,183,101,.22),rgba(217,183,101,.06));color:#fff;font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.82rem;backdrop-filter:blur(4px)}
+.hero-date .icon{width:20px;height:20px;color:var(--gold-l)}
+.hero-date b{color:var(--gold-l);font-family:var(--serif);font-size:1.2rem;letter-spacing:.06em;font-weight:700}
+.hero-date i{width:1px;height:18px;background:rgba(217,183,101,.5)}
+.hero h1{font-size:clamp(3.4rem,7.6vw,6.4rem);filter:drop-shadow(0 6px 24px rgba(0,0,0,.35))}
+.hero-title{max-width:640px}
+.hero-meta{margin:26px 0 30px;gap:12px 28px}
+.hero-meta div{padding:8px 14px;border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(255,255,255,.05)}
+.hero-cta .btn-gold{box-shadow:0 10px 26px rgba(201,162,74,.4)}
+.countdown{background:rgba(6,16,38,.72);backdrop-filter:blur(8px);border-top:1px solid rgba(217,183,101,.35)}
+.cd-grid b{color:var(--gold-l)}
+@media(max-width:640px){.hero-date{font-size:.7rem;letter-spacing:.08em;gap:10px}.hero-date b{font-size:1rem}}
+@media(max-width:1000px){.hero-grid{grid-template-columns:1fr;gap:44px}.hero-visual{margin:0 auto;max-width:380px}.chip-a{left:-8px}}
+@media(max-width:640px){.hero-visual{padding-right:12px;max-width:320px}.chip-b{right:-6px}.chip{padding:9px 12px}}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+
+<body class="no-js">
+<a class="skip" href="#main">Skip to main content</a>
+
+<!-- ============ SVG ICON SPRITE ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20V2H6.5A2.5 2.5 0 0 0 4 4.5z"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4M12 11.5 6.2 17M12 11.5l5.8 5.5"/><circle cx="12" cy="11.5" r="1"/></symbol>
+    <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7zM2 17l10 5 10-5M2 12l10 5 10-5"/></symbol>
+    <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5M3 12a9 3 0 0 0 18 0"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"/><path d="M3.2 12h6.3l.5-1 2 4.5 2-7 1.5 3.5h5.3"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#home" class="brand" aria-label="ICCICT 2K27 – back to top">
+      <img src="assets/logos/ngp-college-seal.png" width="500" height="499" alt="Dr. N.G.P. Arts and Science College seal">
+      <span><b>ICCICT 2K27</b><small>International Conference</small></span>
+    </a>
+
+    <nav aria-label="Primary">
+      <ul class="menu" id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#call-for-papers">Call for Papers</a></li>
+        <li><a href="#tracks">Conference Tracks</a></li>
+        <li><a href="#dates">Important Dates</a></li>
+        <li><a href="#speakers">Speakers</a></li>
+        <li><a href="#committees">Committees</a></li>
+        <li><a href="#registration">Registration</a></li>
+        <li><a href="#venue">Venue</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="nav-cta"><a href="#registration" class="btn btn-gold btn-sm">Register Now</a></li>
+      </ul>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="menu">
+      <svg class="icon i-open" aria-hidden="true"><use href="#i-menu"/></svg>
+      <svg class="icon i-close" aria-hidden="true"><use href="#i-x"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home" aria-labelledby="hero-h">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="hero-main">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <a class="host" href="#institution" aria-label="Hosted by Dr. N.G.P. Arts and Science College, Coimbatore">
+          <img src="assets/logos/ngp-college-seal.png" width="500" height="499" alt="Dr. N.G.P. Arts and Science College seal">
+          <span><small>Hosted by</small><b>Dr. N.G.P. Arts and Science College</b><em>Coimbatore, Tamil Nadu, India</em></span>
+        </a>
+        <div class="hero-date"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg><b>3 February 2027</b><i></i><span>Hybrid Conference</span></div>
+        <h1 id="hero-h">ICCICT <span>2K27</span></h1>
+        <p class="hero-title">International Conference on <b>Computational Intelligence</b> and <b>Communication Technologies</b></p>
+        <div class="hero-meta">
+          <div><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span>Coimbatore, Tamil Nadu, India</span></div>
+          <div><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg><span>Hybrid Mode (Online &amp; Offline)</span></div>
+        </div>
+        <div class="hero-cta">
+          <a href="#registration" class="btn btn-gold">Register Now <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a href="#call-for-papers" class="btn btn-ghost">Call for Papers</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="arch">
+          <img src="assets/institution/campus-banner.jpg" width="1920" height="536" alt="Campus of Dr. N.G.P. Arts and Science College, Coimbatore">
+        </div>
+        <div class="chip chip-a"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg><span><b>International</b>Conference 2027</span></div>
+        <div class="chip chip-b"><svg class="icon" aria-hidden="true"><use href="#i-cpu"/></svg><span><b>8 Research Tracks</b>AI · IoT · Wireless · Security</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="countdown" role="timer" aria-label="Countdown to conference">
+    <div class="wrap">
+      <div class="cd-label">Countdown<em id="cdNote"></em></div>
+      <div class="cd-grid" aria-live="off">
+        <div><b id="cd-d">--</b><small>Days</small></div>
+        <div><b id="cd-h">--</b><small>Hours</small></div>
+        <div><b id="cd-m">--</b><small>Minutes</small></div>
+        <div><b id="cd-s">--</b><small>Seconds</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" aria-labelledby="about-h">
+  <div class="wrap">
+    <div class="about-top">
+      <div class="reveal">
+        <span class="eyebrow">About the Conference</span>
+        <h2 id="about-h">Where Intelligence Meets Connectivity</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="about-text reveal">
+        <p>The International Conference on Computational Intelligence and Communication Technologies (ICCICT 2K27) brings together researchers, academicians, industry experts and students from across the globe to share cutting-edge innovations and research outcomes.</p>
+        <p>The conference provides a premier platform for discussing recent advances, emerging trends and real-world applications in Artificial Intelligence, Machine Learning, IoT, Wireless Networks and next-generation communication systems.</p>
+        <p>Selected papers will be recommended for publication in reputed indexed journals and conference proceedings. Publication and indexing details will be announced officially.</p>
+      </div>
+    </div>
+
+    <div class="about-cols">
+      <div class="about-col reveal">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg>Objectives</h3>
+        <ul class="tick">
+          <li>Bring together researchers, academicians, industry experts and students.</li>
+          <li>Share innovations and research outcomes in computational intelligence and communication technologies.</li>
+          <li>Discuss recent advances, emerging trends and real-world applications.</li>
+        </ul>
+      </div>
+      <div class="about-col reveal">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg>About the Institution</h3>
+        <p>ICCICT 2K27 is hosted at <strong>Dr. N.G.P. Arts and Science College</strong>, Coimbatore, Tamil Nadu, India.</p>
+        <p><a href="#institution" style="color:var(--royal);font-weight:600">Institution &amp; departments →</a></p>
+      </div>
+      <div class="about-col reveal">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>Highlights</h3>
+        <ul class="tick">
+          <li>Hybrid conference — online and offline participation.</li>
+          <li>Eight research tracks spanning intelligence and communication.</li>
+          <li>Selected papers recommended for publication, as described above.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSTITUTION ============ -->
+<section id="institution" class="bg-grey" aria-label="About the host institution">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <p>ICCICT 2K27 is organised at Dr. N.G.P. Arts and Science College, Coimbatore.</p>
+    </div>
+    <figure class="campus reveal">
+      <img src="assets/institution/campus-banner.jpg" width="1920" height="536" alt="Campus of Dr. N.G.P. Arts and Science College, Coimbatore" loading="lazy">
+      <figcaption>Dr. N.G.P. Arts and Science College, Coimbatore</figcaption>
+    </figure>
+    <div class="inst">
+      <article class="inst-card reveal">
+        <h3>About the Institution</h3>
+        <div class="inst-id">
+          <img src="assets/logos/ngp-college-seal.png" width="500" height="499" alt="Dr. N.G.P. Arts and Science College seal" loading="lazy">
+          <div><b>Dr. N.G.P. Arts and Science College</b><span>Coimbatore, Tamil Nadu, India</span></div>
+        </div>
+        <p>Dr. N.G.P. Arts and Science College is the host institution of ICCICT 2K27. The institutional leadership involved in the conference is listed under <a href="#committees" style="color:var(--royal);font-weight:600">Committees</a>.</p>
+      </article>
+      <article class="inst-card reveal">
+        <h3>About the Department</h3>
+        <p>The organising committee includes heads of the following departments of Dr. N.G.P. Arts and Science College:</p>
+        <ul class="depts">
+          <li>Computer Science</li>
+          <li>Computer Applications</li>
+          <li>Information Technology</li>
+          <li>Computer Technology</li>
+          <li>Computer Science with Cognitive Systems</li>
+          <li>Computer Science with Data Analytics</li>
+          <li>Artificial Intelligence and Machine Learning</li>
+          <li>Computer Science with Cyber Security</li>
+        </ul>
+      </article>
+    </div>
+    <!-- Partner logos belong to the AICOST-2026 site. Hidden until confirmed for ICCICT 2K27 (CONFIG.showPartnerLogos). -->
+    <div class="partners reveal" id="partners" hidden>
+      <h3>Supporting Organisations</h3>
+      <p>Logos shown only once confirmed for ICCICT 2K27.</p>
+      <div>
+        <img src="assets/logos/partners/curtin-university-malaysia.png" width="2144" height="621" alt="Curtin University Malaysia" loading="lazy">
+        <img src="assets/logos/partners/analytics-society-of-india.png" width="300" height="87" alt="Analytics Society of India" loading="lazy">
+        <img src="assets/logos/partners/ict-academy.png" width="300" height="125" alt="ICT Academy" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PREVIOUS EDITIONS ============ -->
+<section id="previous-editions" aria-labelledby="prev-h">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Track Record</span>
+      <h2 id="prev-h">Previous Conference</h2>
+    </div>
+    <blockquote class="quote reveal">
+      “As part of our track record, we successfully organized the ICCICT conference in 2024 and 2025. The event witnessed active participation, with more than 150 attendees engaging in the offline conference.”
+      <cite>Source: official conference website of Dr. N.G.P. Arts and Science College</cite>
+    </blockquote>
+    <div class="gallery reveal" id="gallery">
+      <button type="button" data-full="assets/conference/previous-edition-1.png" data-alt="Speaker addressing the audience at a previous ICCICT conference"><img src="assets/conference/previous-edition-1.png" width="821" height="478" alt="Speaker addressing the audience at a previous ICCICT conference" loading="lazy"></button>
+      <button type="button" data-full="assets/conference/previous-edition-2.png" data-alt="Dignitaries on stage releasing the conference proceedings"><img src="assets/conference/previous-edition-2.png" width="827" height="495" alt="Dignitaries on stage releasing the conference proceedings" loading="lazy"></button>
+      <button type="button" data-full="assets/conference/previous-edition-3.png" data-alt="Guests felicitated at a previous conference"><img src="assets/conference/previous-edition-3.png" width="726" height="487" alt="Guests felicitated at a previous conference" loading="lazy"></button>
+      <button type="button" data-full="assets/conference/previous-edition-4.png" data-alt="Delegates and students at a previous conference"><img src="assets/conference/previous-edition-4.png" width="757" height="352" alt="Delegates and students at a previous conference" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+<dialog class="lb" id="lightbox" aria-label="Photo viewer"><button type="button" id="lbClose"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg>Close</button><img id="lbImg" alt=""></dialog>
+
+<!-- ============ CALL FOR PAPERS ============ -->
+<section id="call-for-papers" class="bg-navy" aria-labelledby="cfp-h">
+  <div class="wrap cfp">
+    <div class="cfp-copy reveal">
+      <span class="eyebrow">Call for Papers</span>
+      <h2 id="cfp-h">Submit Your Research to ICCICT 2K27</h2>
+      <p>Authors are invited to submit original, unpublished research in the areas listed under <a href="#tracks" style="color:var(--gold-l);text-decoration:underline;text-underline-offset:3px">Conference Tracks</a> (but not limited to them).</p>
+      <p>Author guidelines, the paper template and review process details will be published on this page before submissions open.</p>
+      <ul class="cfp-list">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Original, unpublished work</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Eight technical tracks</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Online and offline presentation</li>
+      </ul>
+    </div>
+    <aside class="cfp-card reveal" aria-label="Paper submission">
+      <span class="status">Submission portal · Opening soon</span>
+      <h3>Paper Submission</h3>
+      <p>The official submission link has not been released yet. Please check the Important Dates section for updates.</p>
+      <button type="button" class="btn btn-royal" data-action="submit">Submit Your Paper <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ TRACKS ============ -->
+<section id="tracks" class="bg-grey" aria-labelledby="tracks-h">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Research Areas</span>
+      <h2 id="tracks-h">Conference Tracks</h2>
+      <p>Eight technical tracks covering computational intelligence and modern communication technologies.</p>
+    </div>
+    <div class="tracks">
+      <article class="track reveal">
+        <div class="track-top"><span class="track-ic"><svg class="icon" aria-hidden="true"><use href="#i-cpu"/></svg></span><span class="track-no">01</span></div>
+        <h3>Artificial Intelligence &amp; Machine Learning</h3>
+        <p>Learning-based systems that perceive, reason and make decisions.</p>
+        <ul><li>Deep Learning &amp; Neural Networks</li><li>Reinforcement Learning</li><li>Natural Language Processing</li><li>Computer Vision</li></ul>
+      </article>
+      <article class="track reveal">
+        <div class="track-top"><span class="track-ic"><svg class="icon" aria-hidden="true"><use href="#i-network"/></svg></span><span class="track-no">02</span></div>
+        <h3>Computational Intelligence</h3>
+        <p>Nature-inspired and soft-computing approaches to complex problems.</p>
+        <ul><li>Fuzzy Systems</li><li>Evolutionary Computing</li><li>Swarm Intelligence</li><li>Soft Computing</li></ul>
+      </article>
+      <article class="track reveal">
+        <div class="track-top"><span class="track-ic"><svg class="icon" aria-hidden="true"><use href="#i-wifi"/></svg></span><span class="track-no">03</span></div>
+        <h3>Wireless &amp; Mobile Communication</h3>
+        <p>Next-generation wireless technologies and network architectures.</p>
+        <ul><li>5G / 6G Networks</li><li>MIMO &amp; Massive MIMO</li><li>Cognitive Radio</li><li>Satellite Communication</li></ul>
+      </article>
+      <article class="track reveal">
+        <div class="track-top"><span class="track-ic"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg></span><span class="track-no">04</span></div>
+        <h3>Internet of Things (IoT)</h3>
+        <p>Connected devices, sensing and intelligence at the edge.</p>
+        <ul><li>Smart Cities &amp; Smart Homes</li><li>Edge &amp; Fog Computing</li><li>Wireless Sensor Networks</li><li>Industrial IoT</li></ul>
+      </article>
+      <article class="track reveal">
+        <div class="track-top"><span class="track-ic"><svg class="icon" aria-hidden="true"><use href="#i-db"/></svg></span><span class="track-no">05</span></div>
+        <h3>Big Data &amp; Data Science</h3>
+        <p>Extracting knowledge and insight from large-scale data.</p>
+        <ul><li>Data Mining &amp; Analytics</li><li>Predictive Modelling</li><li>Cloud Computing</li><li>Data Visualization</li></ul>
+      </article>
+      <article class="track reveal">
+        <div class="track-top"><span class="track-ic"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span><span class="track-no">06</span></div>
+        <h3>Cyber Security &amp; Blockchain</h3>
+        <p>Securing networks, data and distributed digital systems.</p>
+        <ul><li>Network Security</li><li>Cryptography</li><li>Blockchain Technology</li><li>Intrusion Detection</li></ul>
+      </article>
+      <article class="track reveal">
+        <div class="track-top"><span class="track-ic"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></span><span class="track-no">07</span></div>
+        <h3>Healthcare &amp; Bio-Informatics</h3>
+        <p>Computational methods applied to health and life sciences.</p>
+        <ul><li>Medical Image Processing</li><li>Smart Healthcare Systems</li><li>Bio-Signal Processing</li><li>Disease Prediction</li></ul>
+      </article>
+      <article class="track reveal">
+        <div class="track-top"><span class="track-ic"><svg class="icon" aria-hidden="true"><use href="#i-image"/></svg></span><span class="track-no">08</span></div>
+        <h3>Signal &amp; Image Processing</h3>
+        <p>Analysis, interpretation and enhancement of signals and images.</p>
+        <ul><li>Multimedia Processing</li><li>Pattern Recognition</li><li>Speech Processing</li><li>Remote Sensing</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IMPORTANT DATES ============ -->
+<section id="dates" aria-labelledby="dates-h">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Mark Your Calendar</span>
+      <h2 id="dates-h">Important Dates</h2>
+      <p>Key milestones for authors and delegates.</p>
+    </div>
+    <ol class="timeline">
+      <li class="tl reveal"><div class="tl-box"><span class="tl-step">Step 01</span><h3>Paper Submission Opens</h3></div></li>
+      <li class="tl reveal"><div class="tl-box"><span class="tl-step">Step 02</span><h3>Paper Submission Deadline</h3></div></li>
+      <li class="tl reveal"><div class="tl-box"><span class="tl-step">Step 03</span><h3>Acceptance Notification</h3></div></li>
+      <li class="tl reveal"><div class="tl-box"><span class="tl-step">Step 04</span><h3>Camera-Ready Paper Submission</h3></div></li>
+      <li class="tl reveal"><div class="tl-box"><span class="tl-step">Step 05</span><h3>Registration Deadline</h3></div></li>
+      <li class="tl final reveal"><div class="tl-box"><span class="tl-step">Step 06</span><h3>Conference Date</h3><span class="date">February 3, 2027</span></div></li>
+    </ol>
+    <p class="dates-note">Other dates will be published here by the organising committee.</p>
+  </div>
+</section>
+
+<!-- ============ SPEAKERS ============ -->
+<section id="speakers" class="bg-grey" aria-labelledby="spk-h">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Our Experts</span>
+      <h2 id="spk-h">Speakers &amp; Guests</h2>
+      <p>Distinguished guests and keynote speakers will be announced shortly.</p>
+    </div>
+    <div class="spk-panel reveal">
+      <ul>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>Chief Guest</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>Keynote Speakers</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>Invited Talks</li>
+      </ul>
+      <p>The line-up will be announced on this page shortly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMMITTEES ============ -->
+<section id="committees" aria-labelledby="cmt-h">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">People Behind the Conference</span>
+      <h2 id="cmt-h">Conference Leadership &amp; Committees</h2>
+      <p>Patrons, conference chair and steering committee.</p>
+    </div>
+    <div id="panel-lead" class="panel"></div>
+    <noscript><p style="text-align:center;margin-top:24px">Please enable JavaScript to view the committee listings.</p></noscript>
+  </div>
+</section>
+
+<!-- ============ REGISTRATION ============ -->
+<section id="registration" class="bg-grey" aria-labelledby="reg-h">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Join Us</span>
+      <h2 id="reg-h">Registration</h2>
+      <p>Delegate registration fees by category.</p>
+    </div>
+    <div class="table-wrap reveal" tabindex="0" role="region" aria-label="Registration fees table">
+      <table>
+        <caption>Registration fees by delegate category</caption>
+        <thead>
+          <tr>
+            <th scope="col">Category</th>
+            <th scope="col">Registration Fee<small>Fee in INR (₹)</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Student</th><td>₹ 500</td></tr>
+          <tr><th scope="row">Research Scholar</th><td>₹ 750</td></tr>
+          <tr><th scope="row">Academic</th><td>₹ 1,000</td></tr>
+          <tr><th scope="row">Industry</th><td>₹ 1,500</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="reg-foot reveal">
+      <p>Registration fees are in Indian Rupees (₹).</p>
+      <button type="button" class="btn btn-royal" data-action="register">Register Now <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VENUE ============ -->
+<section id="venue" aria-labelledby="venue-h">
+  <div class="wrap venue">
+    <div class="venue-info reveal">
+      <span class="eyebrow">Venue</span>
+      <h2 id="venue-h">Dr. N.G.P. Arts and Science College</h2>
+      <p>ICCICT 2K27 will be held at Dr. N.G.P. Arts and Science College, Coimbatore, Tamil Nadu, India, in hybrid mode with both online and offline participation.</p>
+      <ul class="facts">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><div><b>Location</b><span>Coimbatore, Tamil Nadu, India</span></div></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg><div><b>Mode</b><span>Hybrid (Online &amp; Offline)</span></div></li>
+      </ul>
+    </div>
+    <div class="map reveal" id="mapBox">
+      <div>
+        <div class="pin"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></div>
+        <h3>Find the Venue</h3>
+        <p>Dr. N.G.P. Arts and Science College, Coimbatore, Tamil Nadu, India</p>
+        <a class="btn btn-gold btn-sm" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Dr.+N.G.P.+Arts+and+Science+College+Coimbatore">Open in Google Maps <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <!-- To embed a verified map: set CONFIG.mapEmbedUrl in the script below. -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="bg-grey" aria-labelledby="contact-h">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Get In Touch</span>
+      <h2 id="contact-h">Contact Us</h2>
+      <p>Questions about submissions, registration or the venue? Reach out to the organising team.</p>
+    </div>
+    <div class="contact">
+      <div class="reveal">
+        <div class="c-list">
+          <div class="c-item"><span class="ci"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span><div><b>Phone</b><a href="tel:+914222369253">+91 4222 369 253</a></div></div>
+          <div class="c-item"><span class="ci"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span><div><b>College Address</b><span class="v">Dr. N.G.P. Arts and Science College,<br>Coimbatore, Tamil Nadu, India</span></div></div>
+        </div>
+      </div>
+
+      <form id="contactForm" class="reveal" novalidate aria-labelledby="form-h">
+        <h3 id="form-h">Send a Message</h3>
+        <div class="row">
+          <div class="field"><label for="f-name">Your Name <i aria-hidden="true">*</i></label><input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name"><div class="err" id="e-name">Please enter your name.</div></div>
+          <div class="field"><label for="f-email">Your Email <i aria-hidden="true">*</i></label><input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email"><div class="err" id="e-email">Please enter a valid email address.</div></div>
+        </div>
+        <div class="field"><label for="f-sub">Subject</label><input id="f-sub" name="subject" type="text"></div>
+        <div class="field"><label for="f-msg">Your Message <i aria-hidden="true">*</i></label><textarea id="f-msg" name="message" required aria-describedby="e-msg"></textarea><div class="err" id="e-msg">Please enter a message (at least 10 characters).</div></div>
+        <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+        <button type="submit" class="btn btn-royal">Send Message <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#home" class="brand" aria-label="ICCICT 2K27 – back to top">
+          <img class="plate" src="assets/logos/ngp-college-seal.png" width="500" height="499" alt="Dr. N.G.P. Arts and Science College seal" loading="lazy">
+          <span><b>ICCICT 2K27</b><small>International Conference</small></span>
+        </a>
+        <p>International Conference on Computational Intelligence and Communication Technologies. Hosted at Dr. N.G.P. Arts and Science College, Coimbatore.</p>
+      </div>
+      <nav aria-label="Quick navigation">
+        <h4>Quick Navigation</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#tracks">Conference Tracks</a></li>
+          <li><a href="#dates">Important Dates</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#committees">Committees</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Important links">
+        <h4>Important Links</h4>
+        <ul>
+          <li><a href="#call-for-papers">Call for Papers</a></li>
+          <li><a href="#registration">Registration</a></li>
+          <li><a href="#venue">Venue</a></li>
+          <li><a href="#institution">Institution</a></li>
+          <li><a href="#previous-editions">Previous Conference</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h4>Contact</h4>
+        <address>
+          <span>Dr. N.G.P. Arts and Science College, Coimbatore, Tamil Nadu, India</span>
+          <a href="tel:+914222369253">+91 4222369253</a>
+        </address>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2027 ICCICT 2K27 · Dr. N.G.P. Arts and Science College, Coimbatore. All rights reserved.</span>
+      <span>Hybrid conference · Coimbatore, India</span>
+    </div>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="Back to top"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* =========================================================
+   CONFIG — edit these values when official details are ready
+   ========================================================= */
+const CONFIG = {
+  // Countdown target (local time). Set to null to show "Date to be announced".
+  conferenceDate: '2027-02-03T09:00:00',
+  // Add official links here when available (leave '' until then).
+  submissionUrl: '',
+  registrationUrl: '',
+  // Paste a verified Google Maps embed URL (the src="..." of the iframe) to show a live map.
+  mapEmbedUrl: '',
+  // Partner logos (Curtin University Malaysia, Analytics Society of India, ICT Academy) appear on the
+  // AICOST-2026 site. Set to true only after the organisers confirm them for ICCICT 2K27.
+  showPartnerLogos: false
+};
+
+(function(){
+  'use strict';
+  document.body.classList.remove('no-js');
+  const $ = (s, r=document) => r.querySelector(s);
+  const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Mobile menu ---------- */
+  const burger = $('#burger'), menu = $('#menu');
+  const setMenu = open => { menu.classList.toggle('open', open); burger.setAttribute('aria-expanded', String(open)); };
+  burger.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+  $$('a', menu).forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && menu.classList.contains('open')) { setMenu(false); burger.focus(); } });
+  document.addEventListener('click', e => { if (menu.classList.contains('open') && !e.target.closest('#nav')) setMenu(false); });
+  window.addEventListener('resize', () => { if (window.innerWidth > 1240) setMenu(false); });
+
+  /* ---------- Sticky nav shadow + back-to-top ---------- */
+  const nav = $('#nav'), totop = $('#totop');
+  const onScroll = () => {
+    const y = window.scrollY;
+    nav.classList.toggle('scrolled', y > 10);
+    totop.classList.toggle('show', y > 700);
+  };
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  totop.addEventListener('click', () => window.scrollTo({top:0, behavior: reduce ? 'auto' : 'smooth'}));
+
+  /* ---------- Scroll spy ---------- */
+  const links = $$('#menu a[href^="#"]').filter(a => !a.classList.contains('btn'));
+  const map = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+  const sections = [...map.keys()].map(id => document.getElementById(id)).filter(Boolean);
+  const spy = () => {
+    let current = sections[0].id;
+    const line = window.innerHeight * 0.35;
+    sections.forEach(s => { if (s.getBoundingClientRect().top <= line) current = s.id; });
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) current = sections[sections.length-1].id;
+    map.forEach((a, id) => { id === current ? a.setAttribute('aria-current','true') : a.removeAttribute('aria-current'); a.classList.toggle('active', id === current); });
+  };
+  window.addEventListener('scroll', spy, {passive:true}); window.addEventListener('resize', spy); spy();
+
+  /* ---------- Scroll reveal ---------- */
+  const revealEls = $$('.reveal');
+  if ('IntersectionObserver' in window && !reduce) {
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }), {threshold:.12, rootMargin:'0px 0px -30px 0px'});
+    revealEls.forEach((el, i) => { el.style.transitionDelay = ((i % 4) * 70) + 'ms'; io.observe(el); });
+  } else { revealEls.forEach(el => el.classList.add('in')); }
+
+  /* ---------- Countdown ---------- */
+  const cd = {d:$('#cd-d'), h:$('#cd-h'), m:$('#cd-m'), s:$('#cd-s')}, cdNote = $('#cdNote');
+  const target = CONFIG.conferenceDate ? new Date(CONFIG.conferenceDate).getTime() : NaN;
+  const pad = n => String(n).padStart(2,'0');
+  function tick(){
+    if (isNaN(target)) { Object.values(cd).forEach(el => el.textContent = '--'); cdNote.textContent = 'Date to be announced'; return false; }
+    const diff = Math.max(0, target - Date.now());
+    cd.d.textContent = pad(Math.floor(diff / 864e5));
+    cd.h.textContent = pad(Math.floor(diff % 864e5 / 36e5));
+    cd.m.textContent = pad(Math.floor(diff % 36e5 / 6e4));
+    cd.s.textContent = pad(Math.floor(diff % 6e4 / 1e3));
+    return diff > 0;
+  }
+  if (tick()) { const t = setInterval(() => { if (!tick()) clearInterval(t); }, 1000); }
+
+  /* ---------- Toast + placeholder CTAs ---------- */
+  const toast = $('#toast'); let toastT;
+  function showToast(msg){
+    toast.textContent = msg; toast.classList.add('show');
+    clearTimeout(toastT); toastT = setTimeout(() => toast.classList.remove('show'), 4200);
+  }
+  $$('[data-action]').forEach(btn => btn.addEventListener('click', () => {
+    const isSubmit = btn.dataset.action === 'submit';
+    const url = isSubmit ? CONFIG.submissionUrl : CONFIG.registrationUrl;
+    if (url) { window.open(url, '_blank', 'noopener'); return; }
+    showToast(isSubmit ? 'The paper submission portal is not open yet. Dates: To Be Announced.' : 'Online registration is not open yet. Fee details will be announced soon.');
+  }));
+
+  /* ---------- Optional verified map embed ---------- */
+  if (CONFIG.mapEmbedUrl) {
+    const f = document.createElement('iframe');
+    f.src = CONFIG.mapEmbedUrl; f.title = 'Map showing Dr. N.G.P. Arts and Science College, Coimbatore';
+    f.loading = 'lazy'; f.referrerPolicy = 'no-referrer-when-downgrade'; f.setAttribute('allowfullscreen','');
+    $('#mapBox').appendChild(f);
+  }
+
+  /* ---------- Contact form validation ---------- */
+  const form = $('#contactForm'), status = $('#formStatus');
+  const rules = {
+    name: v => v.trim().length >= 2,
+    email: v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()),
+    message: v => v.trim().length >= 10
+  };
+  const fieldOf = el => el.closest('.field');
+  function check(el){
+    const ok = rules[el.name] ? rules[el.name](el.value) : true;
+    fieldOf(el).classList.toggle('invalid', !ok);
+    el.setAttribute('aria-invalid', String(!ok));
+    return ok;
+  }
+  $$('input[required],textarea[required]', form).forEach(el => {
+    el.addEventListener('blur', () => check(el));
+    el.addEventListener('input', () => { if (fieldOf(el).classList.contains('invalid')) check(el); });
+  });
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const bad = $$('input[required],textarea[required]', form).filter(el => !check(el));
+    status.className = 'form-status show';
+    if (bad.length) {
+      status.classList.add('bad');
+      status.textContent = 'Please correct the highlighted fields and try again.';
+      bad[0].focus();
+      return;
+    }
+    status.classList.add('ok');
+    status.textContent = 'Thank you — your message passed validation. This demonstration site has no server connected, so it has not been sent. Please email the conference address listed on this page.';
+    form.reset();
+    $$('.field', form).forEach(f => f.classList.remove('invalid'));
+  });
+
+  /* ---------- Hero network background ---------- */
+  const c = $('#net'), ctx = c.getContext('2d');
+  let W, H, pts = [], running = true, raf;
+  function size(){
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const r = c.getBoundingClientRect();
+    W = r.width; H = r.height;
+    c.width = W * dpr; c.height = H * dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+    const n = Math.round(Math.min(70, Math.max(24, W / 22)));
+    pts = Array.from({length:n}, () => ({x:Math.random()*W, y:Math.random()*H, vx:(Math.random()-.5)*.3, vy:(Math.random()-.5)*.3}));
+  }
+  function frame(){
+    ctx.clearRect(0,0,W,H);
+    for (let i=0;i<pts.length;i++){
+      const p = pts[i];
+      if (!reduce){ p.x += p.vx; p.y += p.vy; if (p.x<0||p.x>W) p.vx*=-1; if (p.y<0||p.y>H) p.vy*=-1; }
+      for (let j=i+1;j<pts.length;j++){
+        const q = pts[j], d = Math.hypot(p.x-q.x, p.y-q.y);
+        if (d < 150){ ctx.strokeStyle = 'rgba(143,176,255,' + (.28*(1-d/150)).toFixed(3) + ')'; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(q.x,q.y); ctx.stroke(); }
+      }
+      ctx.fillStyle = i % 7 === 0 ? 'rgba(217,183,101,.85)' : 'rgba(180,200,255,.6)';
+      ctx.beginPath(); ctx.arc(p.x,p.y,i % 7 === 0 ? 2.4 : 1.7,0,Math.PI*2); ctx.fill();
+    }
+    if (running && !reduce) raf = requestAnimationFrame(frame);
+  }
+  size(); frame();
+  let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { size(); if (reduce) frame(); }, 200); });
+  if ('IntersectionObserver' in window && !reduce) {
+    new IntersectionObserver(es => es.forEach(e => {
+      running = e.isIntersecting; cancelAnimationFrame(raf); if (running) frame();
+    })).observe($('#home'));
+  }
+})();
+
+/* =========================================================
+   COMMITTEE DATA — names/designations exactly as published on
+   https://conference-ngp.vercel.app/committee and /tpc-member.
+   Optional fields: ini (initials override), photo (path in assets/committee/).
+   ========================================================= */
+const COMMITTEE = {
+  patrons: [
+    {n:'Dr. Nalla. G. Palaniswami M.D., A.B., (USA)', d:'Chairman, Dr. NGPRET', ini:'NP'},
+    {n:'Dr. Thavamani D. Palaniswami M.D., A.B., (USA)', d:'CSecretary, Dr. N.G.P. Arts and Science College', ini:'TP'},
+    {n:'Mrs. Mathura V. Palaniswami', d:'Director - Academy for Professional Development'},
+    {n:'Dr. P. R. Muthuswamy', d:'Director - Dr. N.G.P. Educational Institutions'},
+    {n:'Dr. O.T. Buvaneswaran', d:'CEO, Dr. N.G.P. Research and Educational Trust'}
+  ],
+  chair: [{n:'Dr. S. Saravanan', d:'Principal, Dr. N.G.P. Arts and Science College'}],
+  steering: [
+    {n:'Dr. F. Mary Magdalene Jane', d:'Dean - Computer Science'},
+    {n:'Dr. P.B. Banudevi', d:'Dean - Commerce & Management'}
+  ]
+};
+
+(function(){
+  'use strict';
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const initials = n => {
+    const t = n.replace(/^(Dr|Mrs|Mr|Prof)\.?\s+/i,'').split(/\s+/).filter(w => /[A-Za-z]/.test(w));
+    return ((t[0]||'')[0] + (t.length > 1 ? t[t.length-1][0] : '')).toUpperCase();
+  };
+  const avatar = p => p.photo ? `<img src="${esc(p.photo)}" alt="${esc(p.n)}" loading="lazy">` : esc(p.ini || initials(p.n));
+  const card = (p, cls='', tag='') => `<article class="pc ${cls}"><h4>${esc(p.n)}</h4><p>${esc(p.d)}</p>${tag ? `<span class="tag">${tag}</span>` : ''}</article>`;
+  const grid = (list, cls='', cardCls='', tag='') => `<div class="people ${cls}">${list.map(p => card(p, cardCls, tag)).join('')}</div>`;
+  const group = (title, body, count) => `<div class="grp"><h3>${title}${count ? `<span class="count">${count}</span>` : ''}</h3>${body}</div>`;
+  const roster = rows => `<ul class="roster">${rows.map(r => `<li><span class="ini" aria-hidden="true">${esc(initials(r[0]))}</span><div><b>${esc(r[0])}</b><span>${esc(r[1])}</span></div></li>`).join('')}</ul>`;
+  const C = COMMITTEE;
+
+  document.getElementById('panel-lead').innerHTML =
+    group('Patrons', grid(C.patrons,'p5','lg')) +
+    group('Conference Chair', grid(C.chair,'one','lg')) +
+    group('Steering Committee', grid(C.steering,'duo','lg'));
+
+  /* Partner logos flag */
+  if (CONFIG.showPartnerLogos) document.getElementById('partners').hidden = false;
+
+  /* Gallery lightbox */
+  const lb = document.getElementById('lightbox'), lbImg = document.getElementById('lbImg');
+  document.querySelectorAll('#gallery button').forEach(b => b.addEventListener('click', () => {
+    lbImg.src = b.dataset.full; lbImg.alt = b.dataset.alt;
+    if (lb.showModal) lb.showModal(); else lb.setAttribute('open','');
+  }));
+  const closeLb = () => lb.close ? lb.close() : lb.removeAttribute('open');
+  document.getElementById('lbClose').addEventListener('click', closeLb);
+  lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+})();
+</script>
+</body>
+</html>

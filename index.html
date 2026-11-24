@@ -597,7 +597,6 @@ dialog.lb button .icon{width:20px;height:20px}
         <li><a href="#tracks">Conference Tracks</a></li>
         <li><a href="#dates">Important Dates</a></li>
         <li><a href="#speakers">Speakers</a></li>
-        <li><a href="#committees">Committees</a></li>
         <li><a href="#registration">Registration</a></li>
         <li><a href="#venue">Venue</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -710,7 +709,7 @@ dialog.lb button .icon{width:20px;height:20px}
           <img src="assets/logos/ngp-college-seal.png" width="500" height="499" alt="Dr. N.G.P. Arts and Science College seal" loading="lazy">
           <div><b>Dr. N.G.P. Arts and Science College</b><span>Coimbatore, Tamil Nadu, India</span></div>
         </div>
-        <p>Dr. N.G.P. Arts and Science College is the host institution of ICCICT 2K27. The institutional leadership involved in the conference is listed under <a href="#committees" style="color:var(--royal);font-weight:600">Committees</a>.</p>
+        <p>Dr. N.G.P. Arts and Science College is the host institution of ICCICT 2K27.</p>
       </article>
       <article class="inst-card reveal">
         <h3>About the Department</h3>
@@ -884,19 +883,6 @@ dialog.lb button .icon{width:20px;height:20px}
   </div>
 </section>
 
-<!-- ============ COMMITTEES ============ -->
-<section id="committees" aria-labelledby="cmt-h">
-  <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="eyebrow">People Behind the Conference</span>
-      <h2 id="cmt-h">Conference Leadership &amp; Committees</h2>
-      <p>Patrons, conference chair and steering committee.</p>
-    </div>
-    <div id="panel-lead" class="panel"></div>
-    <noscript><p style="text-align:center;margin-top:24px">Please enable JavaScript to view the committee listings.</p></noscript>
-  </div>
-</section>
-
 <!-- ============ REGISTRATION ============ -->
 <section id="registration" class="bg-grey" aria-labelledby="reg-h">
   <div class="wrap">
@@ -1003,7 +989,6 @@ dialog.lb button .icon{width:20px;height:20px}
           <li><a href="#tracks">Conference Tracks</a></li>
           <li><a href="#dates">Important Dates</a></li>
           <li><a href="#speakers">Speakers</a></li>
-          <li><a href="#committees">Committees</a></li>
         </ul>
       </nav>
       <nav aria-label="Important links">
@@ -1202,45 +1187,8 @@ const CONFIG = {
   }
 })();
 
-/* =========================================================
-   COMMITTEE DATA — names/designations exactly as published on
-   https://conference-ngp.vercel.app/committee and /tpc-member.
-   Optional fields: ini (initials override), photo (path in assets/committee/).
-   ========================================================= */
-const COMMITTEE = {
-  patrons: [
-    {n:'Dr. Nalla. G. Palaniswami M.D., A.B., (USA)', d:'Chairman, Dr. NGPRET', ini:'NP'},
-    {n:'Dr. Thavamani D. Palaniswami M.D., A.B., (USA)', d:'CSecretary, Dr. N.G.P. Arts and Science College', ini:'TP'},
-    {n:'Mrs. Mathura V. Palaniswami', d:'Director - Academy for Professional Development'},
-    {n:'Dr. P. R. Muthuswamy', d:'Director - Dr. N.G.P. Educational Institutions'},
-    {n:'Dr. O.T. Buvaneswaran', d:'CEO, Dr. N.G.P. Research and Educational Trust'}
-  ],
-  chair: [{n:'Dr. S. Saravanan', d:'Principal, Dr. N.G.P. Arts and Science College'}],
-  steering: [
-    {n:'Dr. F. Mary Magdalene Jane', d:'Dean - Computer Science'},
-    {n:'Dr. P.B. Banudevi', d:'Dean - Commerce & Management'}
-  ]
-};
-
 (function(){
   'use strict';
-  const esc = t => String(t).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-  const initials = n => {
-    const t = n.replace(/^(Dr|Mrs|Mr|Prof)\.?\s+/i,'').split(/\s+/).filter(w => /[A-Za-z]/.test(w));
-    return ((t[0]||'')[0] + (t.length > 1 ? t[t.length-1][0] : '')).toUpperCase();
-  };
-  const avatar = p => p.photo ? `<img src="${esc(p.photo)}" alt="${esc(p.n)}" loading="lazy">` : esc(p.ini || initials(p.n));
-  const card = (p, cls='', tag='') => `<article class="pc ${cls}"><h4>${esc(p.n)}</h4><p>${esc(p.d)}</p>${tag ? `<span class="tag">${tag}</span>` : ''}</article>`;
-  const grid = (list, cls='', cardCls='', tag='') => `<div class="people ${cls}">${list.map(p => card(p, cardCls, tag)).join('')}</div>`;
-  const group = (title, body, count) => `<div class="grp"><h3>${title}${count ? `<span class="count">${count}</span>` : ''}</h3>${body}</div>`;
-  const roster = rows => `<ul class="roster">${rows.map(r => `<li><span class="ini" aria-hidden="true">${esc(initials(r[0]))}</span><div><b>${esc(r[0])}</b><span>${esc(r[1])}</span></div></li>`).join('')}</ul>`;
-  const C = COMMITTEE;
-
-  document.getElementById('panel-lead').innerHTML =
-    group('Patrons', grid(C.patrons,'p5','lg')) +
-    group('Conference Chair', grid(C.chair,'one','lg')) +
-    group('Steering Committee', grid(C.steering,'duo','lg'));
-
   /* Partner logos flag */
   if (CONFIG.showPartnerLogos) document.getElementById('partners').hidden = false;
 

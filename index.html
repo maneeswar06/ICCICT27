@@ -511,6 +511,34 @@ dialog.lb button .icon{width:20px;height:20px}
 .countdown{background:rgba(6,16,38,.72);backdrop-filter:blur(8px);border-top:1px solid rgba(217,183,101,.35)}
 .cd-grid b{color:var(--gold-l)}
 @media(max-width:640px){.hero-date{font-size:.7rem;letter-spacing:.08em;gap:10px}.hero-date b{font-size:1rem}}
+/* Hero v2: cinematic centered layout */
+.hero{background:var(--navy) url(assets/institution/campus-banner.jpg) center/cover no-repeat;position:relative}
+.hero::before{background:linear-gradient(180deg,rgba(6,14,34,.88) 0%,rgba(10,26,58,.80) 45%,rgba(6,14,34,.96) 100%),radial-gradient(900px 500px at 50% 35%,rgba(31,75,191,.45),transparent 70%)}
+.hero-main{padding:48px 0 40px}
+.hero-grid{display:block}
+.hero-copy{text-align:center;display:flex;flex-direction:column;align-items:center}
+.host{margin-bottom:26px}
+.hero-kicker{display:flex;align-items:center;gap:16px;font-size:.8rem;font-weight:600;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-l)}
+.hero-kicker i{width:56px;height:1px;background:linear-gradient(90deg,transparent,var(--gold-l))}
+.hero-kicker i:last-child{transform:scaleX(-1)}
+.hero h1{font-size:clamp(4rem,12vw,9.5rem);margin:6px 0 10px;line-height:.95;letter-spacing:.02em}
+.hero-title{max-width:780px;margin:0 auto;text-align:center}
+.hero-when{display:flex;align-items:center;justify-content:center;gap:28px;margin:34px 0 34px;padding:18px 34px;border:1px solid rgba(217,183,101,.45);border-radius:14px;background:rgba(255,255,255,.07);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.when-date{display:flex;align-items:center;gap:14px;text-align:left}
+.when-date b{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;font-family:var(--serif);font-size:4rem;line-height:.9;color:var(--gold-l);font-weight:700}
+.when-date span{font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;line-height:1.4;font-weight:600;color:#fff}
+.when-sep{width:1px;align-self:stretch;background:rgba(217,183,101,.45)}
+.when-info{display:flex;flex-direction:column;gap:10px;text-align:left;font-size:.95rem;color:#e6ebf7}
+.when-info div{display:flex;align-items:center;gap:10px}
+.when-info .icon{width:20px;height:20px;color:var(--gold-l);flex:none}
+.hero-cta{justify-content:center}
+.countdown{background:transparent;border-top:0}
+.countdown .wrap{justify-content:center;flex-direction:column;padding:6px 0 34px;gap:14px}
+.cd-label{text-align:center}
+.cd-grid{gap:16px}
+.cd-grid div{min-width:96px;padding:14px 10px 12px;border:1px solid rgba(217,183,101,.4);border-radius:12px;background:rgba(255,255,255,.07);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.cd-grid b{font-size:2.6rem;line-height:1;display:block}
+@media(max-width:640px){.hero-when{flex-direction:column;gap:16px;padding:18px 22px;width:100%}.when-sep{width:100%;height:1px;align-self:auto}.when-date b{font-size:3.2rem}.cd-grid{gap:8px}.cd-grid div{min-width:68px;padding:10px 4px}.cd-grid b{font-size:1.8rem}.hero-kicker{letter-spacing:.2em;font-size:.68rem}.hero-kicker i{width:24px}.hero h1{font-size:clamp(3.4rem,17vw,5rem)}}
 @media(max-width:1000px){.hero-grid{grid-template-columns:1fr;gap:44px}.hero-visual{margin:0 auto;max-width:380px}.chip-a{left:-8px}}
 @media(max-width:640px){.hero-visual{padding-right:12px;max-width:320px}.chip-b{right:-6px}.chip{padding:9px 12px}}
 
@@ -596,24 +624,21 @@ dialog.lb button .icon{width:20px;height:20px}
           <img src="assets/logos/ngp-college-seal.png" width="500" height="499" alt="Dr. N.G.P. Arts and Science College seal">
           <span><small>Hosted by</small><b>Dr. N.G.P. Arts and Science College</b><em>Coimbatore, Tamil Nadu, India</em></span>
         </a>
-        <div class="hero-date"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg><b>3 February 2027</b><i></i><span>Hybrid Conference</span></div>
+        <p class="hero-kicker"><i></i>International Conference · 2027<i></i></p>
         <h1 id="hero-h">ICCICT <span>2K27</span></h1>
         <p class="hero-title">International Conference on <b>Computational Intelligence</b> and <b>Communication Technologies</b></p>
-        <div class="hero-meta">
-          <div><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span>Coimbatore, Tamil Nadu, India</span></div>
-          <div><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg><span>Hybrid Mode (Online &amp; Offline)</span></div>
+        <div class="hero-when">
+          <div class="when-date"><b>03</b><span>February<br>2027</span></div>
+          <div class="when-sep"></div>
+          <div class="when-info">
+            <div><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Coimbatore, Tamil Nadu, India</div>
+            <div><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg>Hybrid Mode (Online &amp; Offline)</div>
+          </div>
         </div>
         <div class="hero-cta">
           <a href="#registration" class="btn btn-gold">Register Now <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           <a href="#call-for-papers" class="btn btn-ghost">Call for Papers</a>
         </div>
-      </div>
-      <div class="hero-visual">
-        <div class="arch">
-          <img src="assets/institution/campus-banner.jpg" width="1920" height="536" alt="Campus of Dr. N.G.P. Arts and Science College, Coimbatore">
-        </div>
-        <div class="chip chip-a"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg><span><b>International</b>Conference 2027</span></div>
-        <div class="chip chip-b"><svg class="icon" aria-hidden="true"><use href="#i-cpu"/></svg><span><b>8 Research Tracks</b>AI · IoT · Wireless · Security</span></div>
       </div>
     </div>
   </div>
